@@ -22,6 +22,8 @@ public class SimpleCharacterController : MonoBehaviour
         MoveCharacter();
         ApplyGravity();
         KeepCharacterOnXAxis();
+        
+
     }
 
     private void MoveCharacter()
@@ -60,5 +62,18 @@ public class SimpleCharacterController : MonoBehaviour
         var currentPosition = thisTransform.position;
         currentPosition.z = 0f;
         thisTransform.position = currentPosition;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //trigger the even and test with a debug message
+        if (other.gameObject.tag == "Cherry")
+        {
+            Destroy(other.gameObject);
+        }
+
+
+
+
     }
 }

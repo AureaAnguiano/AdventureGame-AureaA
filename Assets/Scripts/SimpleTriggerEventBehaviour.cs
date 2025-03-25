@@ -9,8 +9,14 @@ public class SimpleTriggerEventBehaviour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //trigger the even and test with a debug message
-        triggerEvent.Invoke();
-        Debug.Log("Player interacted with the object!");
+        if (other.gameObject.tag == "Player")
+        {
+            triggerEvent.Invoke();
+        }
+        
+        
+        
+
     }
     
 }
