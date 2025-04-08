@@ -11,7 +11,7 @@ public class SimpleCharacterController : MonoBehaviour
     private Vector3 velocity;
     private Transform thisTransform;
     private AudioSource sound;
-    private AudioSource DM_CGS_15; 
+    public AudioSource DM_CGS_15; 
 
     private void Start()
     {
@@ -73,7 +73,7 @@ public class SimpleCharacterController : MonoBehaviour
         //trigger the even and test with a debug message
         if (other.gameObject.tag == "Cherry")
         {
-            //DM_CGS_15.Play();
+            DM_CGS_15.Play();
             Destroy(other.gameObject);
             
         }
