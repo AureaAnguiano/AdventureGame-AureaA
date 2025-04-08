@@ -10,11 +10,14 @@ public class SimpleCharacterController : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
     private Transform thisTransform;
+    private AudioSource sound;
+    private AudioSource DM_CGS_15; 
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         thisTransform = transform;
+        sound = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -37,6 +40,7 @@ public class SimpleCharacterController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             velocity.y = Mathf.Sqrt(jumpForce * -2f * gravity);
+            sound.Play();
         }
     }
 
@@ -69,7 +73,9 @@ public class SimpleCharacterController : MonoBehaviour
         //trigger the even and test with a debug message
         if (other.gameObject.tag == "Cherry")
         {
+            //DM_CGS_15.Play();
             Destroy(other.gameObject);
+            
         }
 
 
