@@ -11,7 +11,7 @@ public class SimpleCharacterController : MonoBehaviour
     private Vector3 velocity;
     private Transform thisTransform;
     private AudioSource sound;
-    public AudioSource DM_CGS_15; 
+     
 
     private void Start()
     {
@@ -68,18 +68,7 @@ public class SimpleCharacterController : MonoBehaviour
         thisTransform.position = currentPosition;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //trigger the even and test with a debug message
-        if (other.gameObject.tag == "Cherry")
-        {
-            DM_CGS_15.Play();
-            Destroy(other.gameObject);
-            
-        }
+   
 
 
-
-
-    }
 }
