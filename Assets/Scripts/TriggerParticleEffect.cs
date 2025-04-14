@@ -5,8 +5,13 @@ using UnityEngine;
 
 public class TriggerParticleEffect : MonoBehaviour
 {
-    private ParticleSystem particleSystem; //particle system reference
-    public int particleAmount = 10; //Exposed variable for particle amount
+    private ParticleSystem particleSystem;
+
+    public int firstEmissionAmount = 10;
+    public int secondEmissionAmount = 20;
+    public int thirdEmissionAmount = 30;
+    public float delayBetweenEmissions = 0.5f;
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -17,9 +22,20 @@ public class TriggerParticleEffect : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<CharacterController>()) //checks if player triggers event
+        if (other.gameObject.GetComponent<CharacterController>())
         {
-            particleSystem.Emit(particleAmount);
+            StartCoroutine(routine: EmitParticlesCoroutine ());
         }
+    }
+
+    private IEnumerator EmitParticlesCoroutine()
+    {
+        particleSystem.Emit(firstEmissionAmount);
+        yield return new WaitForSeconds(delayBetweenEmissions);
+
+        particleSystem.Emit(secondEmissionAmount);
+        yield return new WaitForSeconds(delayBetweenEmissions);
+
+        particleSystem.Emit(thirdEmissionAmount);
     }
 }
