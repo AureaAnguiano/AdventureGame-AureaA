@@ -26,9 +26,10 @@ public class CharacterAnimationController : MonoBehaviour
     {
         //running and idling
 
-        if (Input.GetAxis("Horizontal") != 0)
+        if (Input.GetAxis("Horizontal") != 0f)
         {
             animator.SetTrigger("Run");
+           
         }
         else
         {
