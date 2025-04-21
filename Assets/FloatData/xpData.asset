@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0fb56449ed0d5a419393b4f4adbe0bf, type: 3}
   m_Name: xpData
   m_EditorClassIdentifier: 
-  value: 0.70000005
+  value: 0.7
