@@ -8861,6 +8861,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1616542170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3420641326865501104, guid: db3cb16c17c13894191ce92647359c8f, type: 3}
+  m_PrefabInstance: {fileID: 4777119205499662816}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &1637165723 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 2399816175446405291, guid: b6f1112975879104ebb23d9e3cfa7da7, type: 3}
@@ -10083,6 +10088,18 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2126954171}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: off
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1128627896}
+        m_TargetAssemblyTypeName: Destroy_time, Assembly-CSharp
+        m_MethodName: Destroyer
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1616542170}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
