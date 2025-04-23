@@ -14,4 +14,10 @@ public class ButtonFunction : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void ButtonMainM()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
+

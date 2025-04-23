@@ -48,7 +48,7 @@ public class SimpleCharacterController : MonoBehaviour
 
     private void QuitGame()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene(0);
         }
